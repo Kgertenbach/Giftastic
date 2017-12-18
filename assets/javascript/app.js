@@ -1,9 +1,7 @@
 $(document).ready(function() {
-//Array for searched searchedTopics to be added
+
 var searchedTopics = [];
 
-	//Function with AJAX call to GIPHY; Q parameterc for API link set to search term, limit 10 results
-  //Create div with respective still and animate image sources with "data-state", "data-still" and "data-animate" attributes
  	function displaySearch() {
 
 	var userSearch = $(this).data("search");
@@ -42,7 +40,7 @@ var searchedTopics = [];
 	});
 }
 
-  //Submit button click event takes search term from form input, trims and pushes to searchedTopics array, displays button
+ 
 	$("#addTopic").on("click", function(event) {
         event.preventDefault();
         var newTopic = $("#userSearch").val().trim();
@@ -52,7 +50,7 @@ var searchedTopics = [];
         displayButtons();
       });
 
-  //Function iterates through searchedTopics array to display button with array values in "buttons" section of HTML
+
 	function displayButtons() {
     $("#buttons").empty();
     for (var i = 0; i < searchedTopics.length; i++) {
@@ -67,13 +65,13 @@ var searchedTopics = [];
 
   displayButtons();
 
-  //Click event on button with id of "buttonsOfFun" executes displaySearch function
+  
   $(document).on("click", "#buttonsOfFun", displaySearch);
 
-  //Click event on gifs with class of "userSearchImage" executes pausePlayGifs function
+  
   $(document).on("click", ".userSearchImage", pausePlayGifs);
 
-  //Function accesses "data-state" attribute and depending on status, changes image source to "data-animate" or "data-still"
+ 
   function pausePlayGifs() {
   	 var state = $(this).attr("data-state");
       if (state === "still") {
