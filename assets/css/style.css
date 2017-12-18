@@ -1,0 +1,40 @@
+body {
+    background:url("../images/background.png");
+    }
+#buttonsOfFun,
+ 
+#button {
+    margin: 15px;
+    background-color: red;
+}
+
+h1{
+    background-color: beige;
+    margin:50%;
+    padding:2%;
+    margin-left: 15%;
+    boder: solid, grey;
+}
+
+p,
+.container{
+    font-size: 15px;
+    line-height: 20px;
+    margin:10px; 
+    margin-left: 5%;
+}
+form{
+    margin: 50px;
+    padding:2%;
+    background-color: beige;
+}
+img {
+    margin-left:300px;
+    margin:50px;
+    border-radius: 3%;
+    height:300px;
+}
+#instructions{
+    margin: 50px;
+    padding:2%;
+    background-color: rgb(115, 235, 175);
